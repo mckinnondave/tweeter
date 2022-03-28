@@ -3,6 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+ 
 html {
   box-sizing: border-box;
 }
@@ -24,3 +25,18 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+  border: solid black;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 500px;
+  background-color: #cf2d2d;
+  background-image: url("https://www.transparenttextures.com/patterns/fabric-of-squares.png");
+ }
+
+ .mainContainer {
+  border: solid black;
+  width: 90vw;
+ }
