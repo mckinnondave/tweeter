@@ -1,3 +1,39 @@
+/* * {
+  border: solid black;
+} */
+
 nav {
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  width: 100vw;
+}
+/* Container for all nav classes inside nav bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:120px;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+/* "Tweeter" logo */
+.tweeterLogo {
+  display: flex;
   font-family: 'Bungee', cursive, sans-serif;
+  font-size: 40px;
+}
+/* "Write a new tweet" text */
+.newTweet {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px
+}
+/* Red down arrow */
+.fa-angles-down {
+  display: flex;
+  justify-content: center;
+  color: red;
 }
