@@ -35,5 +35,17 @@ nav {
 .fa-angles-down {
   display: flex;
   justify-content: center;
-  color: red;
+  color: #cf2d2d;
+}
+
+header {
+  border: solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #cf2d2d;
+  background-image: url("https://www.transparenttextures.com/patterns/fabric-of-squares.png");
+  height: 400px;
+  width: 100vw;
 }
