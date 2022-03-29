@@ -7,11 +7,11 @@ $(document).ready(function() {
     $counter.val(140 - textLength);
 
     if ($counter.val() < 0) {
-      $counter.addClass("counterRed")
+      $counter.addClass("redCounter")
     }
 
     if ($counter.val() >= 0) {
-      $counter.removeClass("counterRed")
+      $counter.removeClass("redCounter")
     }
   });
 
