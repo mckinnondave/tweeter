@@ -30,10 +30,9 @@ body {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 500px;
+  height: 1000px;
   background-color: #ec864a;
   background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
-
  }
 
  .mainContainer {
