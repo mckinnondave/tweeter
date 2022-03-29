@@ -8,7 +8,7 @@ nav {
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
-  width: 100vw;
+  width: 100%;
 }
 /* Container for all nav classes inside nav bar */
 .navbar {
@@ -31,7 +31,8 @@ nav {
   justify-content: end;
   flex-direction: column;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 30px
+  font-size: 30px;
+  font-weight: bold;
 }
 /* Red down arrow */
 .fa-angles-down {
@@ -48,5 +49,5 @@ header {
   background-color: #ec864a;
   background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
   height: 400px;
-  width: 100vw;
+  width: 100%;
 }
