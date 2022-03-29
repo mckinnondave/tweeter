@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  // Changes counter number based on how many characters are input in <textarea> (id of tweet-text).
   $("#tweet-text").on("input", function() {
     const textLength = $(this).val().length;
     const $counter = $(this).siblings("div").children(".counter")
