@@ -16,6 +16,7 @@
   resize: none;
   outline: none;
   height: 45px;
+  font-weight: bold;
 }
 
 .textArea::placeholder {
@@ -26,4 +27,8 @@
 .new-tweet button {
   background-color: #4056A1;
   color: white;
+}
+
+.counterRed {
+  color: red;
 }
