@@ -16,7 +16,7 @@ html {
  */
 
 body {
-  color: #545149;
+  color: /* #545149; */ black;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -27,16 +27,14 @@ body {
  */
 
  main {
-  border: solid black;
   display: flex;
   justify-content: center;
   width: 100vw;
   height: 500px;
-  background-color: #cf2d2d;
+  background-color: #ec864a;
   background-image: url("https://www.transparenttextures.com/patterns/fabric-of-squares.png");
  }
 
  .mainContainer {
-  border: solid black;
   width: 90vw;
  }
