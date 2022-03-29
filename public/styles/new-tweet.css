@@ -1,0 +1,29 @@
+.new-tweet div {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive, sans-serif;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.textArea {
+  width: 100%;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: solid black 5px;
+  background: transparent;
+  resize: none;
+  outline: none;
+  height: 45px;
+}
+
+.textArea::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+.new-tweet button {
+  background-color: #4056A1;
+  color: white;
+}
