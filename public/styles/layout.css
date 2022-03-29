@@ -39,3 +39,93 @@ body {
  .mainContainer {
   width: 90vw;
  }
+
+ /* Article section for displaying tweets contains 3 sections inside: Header, Midsection, Footer */
+ article {
+  border: solid black 5px;
+  width: 100%;
+  height: 250px;
+  margin-top: 50px;
+}
+
+article:hover {
+  transition: .3s;
+  box-shadow: 0 0 11px black
+}
+
+/* Header Content */
+article header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px; 
+}
+
+header .userName {
+  display: flex;
+  align-items: center; 
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+header .userHandle {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+/* Midsection Content */
+.midSection {
+  display: flex;
+  justify-content: center;
+  height: 120px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+div .innerText {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+/* Footer Content */
+article footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid black 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 40px;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+}
+
+.datePosted {
+  margin-left: 10px;
+}
+
+.lowerIcons {
+  margin-right: 10px;
+  color: #4056A1
+}
+
+.fa-retweet {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.fa-solid:hover {
+  color: white;
+  transition: 0.3s;
+}
+
+
