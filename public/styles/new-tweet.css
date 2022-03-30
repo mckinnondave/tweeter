@@ -6,6 +6,10 @@
   margin-top: 10px;
 }
 
+.tweetButtonRow button {
+  border-radius: 5px;
+}
+
 .textArea {
   width: 100%;
   border-left: none;
