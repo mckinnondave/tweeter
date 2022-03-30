@@ -1,29 +1,4 @@
 $(document).ready(function() {
-  
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
 
   // Takes in an object and formats its data into an article
   const createTweetElement = (tweetData) => {
@@ -41,7 +16,7 @@ $(document).ready(function() {
           <div class="innerText">${content.text}</div>
         </div>
         <footer>
-          <div class="datePosted">${created_at}</div>
+          <div class="datePosted">${timeago.format(created_at)}</div>
           <div class="lowerIcons">
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
@@ -57,9 +32,27 @@ $(document).ready(function() {
   const renderTweets = (tweetObjects) => {
     for (const object of tweetObjects) {
       const $tweet = createTweetElement(object);
-      $(".new-tweet").append($tweet);
+      $(".new-tweet-container").prepend($tweet);
     }
   }
-  renderTweets(data);
+
+  // Takes what is typed in the tweet form, serializes it and posts it to /tweets once submit
+  $("#tweetForm").submit(function(event) {
+    event.preventDefault();
+    $.ajax("/tweets", {method: "POST", data:  $(this).serialize()})
+    .then(function() {
+      $(".new-tweet-container").empty(); // prevent duplication
+      loadTweets();
+    })
+  })
+
+  // retrieves tweet data and sends to renderTweets
+  const loadTweets = () => {
+    $.ajax("/tweets", { method: "GET" })
+    .then(function(data) {
+      renderTweets(data);
+    })
+  }
+  loadTweets();
 
 })
