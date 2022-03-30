@@ -1,3 +1,4 @@
+/* row containing tweet button and counter */
 .tweetButtonRow {
   display: flex;
   justify-content: space-between;
@@ -8,6 +9,8 @@
 
 .tweetButtonRow button {
   border-radius: 5px;
+  background-color: #4056A1;
+  color: white;
 }
 
 .textArea {
@@ -26,11 +29,6 @@
 .textArea::placeholder {
   color: black;
   font-weight: bold;
-}
-
-.new-tweet button {
-  background-color: #4056A1;
-  color: white;
 }
 
 .redCounter {
