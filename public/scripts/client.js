@@ -39,6 +39,15 @@ $(document).ready(function() {
   // Takes what is typed in the tweet form, serializes it and posts it to /tweets once submit
   $("#tweetForm").submit(function(event) {
     event.preventDefault();
+
+    const text = $("#tweet-text").val()
+    if(text.length > 140) {
+      return alert("Message is too long!")
+    }
+    if(text.length === 0) {
+      return alert("Cannot post an empty tweet!")
+    }
+
     $.ajax("/tweets", {method: "POST", data:  $(this).serialize()})
       .then(function() {
         $(".new-tweet-container").empty(); // prevent duplication
