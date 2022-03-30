@@ -25,8 +25,8 @@ $(document).ready(function() {
         </footer>
       </article>
     `);
-    return $tweet
-  }
+    return $tweet;
+  };
 
   // Takes in array of tweet objects, sends each through createTweetElement, and posts each resulting article to the main tweet container
   const renderTweets = (tweetObjects) => {
@@ -34,25 +34,25 @@ $(document).ready(function() {
       const $tweet = createTweetElement(object);
       $(".new-tweet-container").prepend($tweet);
     }
-  }
+  };
 
   // Takes what is typed in the tweet form, serializes it and posts it to /tweets once submit
   $("#tweetForm").submit(function(event) {
     event.preventDefault();
     $.ajax("/tweets", {method: "POST", data:  $(this).serialize()})
-    .then(function() {
-      $(".new-tweet-container").empty(); // prevent duplication
-      loadTweets();
-    })
-  })
+      .then(function() {
+        $(".new-tweet-container").empty(); // prevent duplication
+        loadTweets();
+      });
+  });
 
   // retrieves tweet data and sends to renderTweets
   const loadTweets = () => {
     $.ajax("/tweets", { method: "GET" })
-    .then(function(data) {
-      renderTweets(data);
-    })
-  }
+      .then(function(data) {
+        renderTweets(data);
+      });
+  };
   loadTweets();
 
-})
+});
