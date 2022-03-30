@@ -28,6 +28,9 @@
   <!-- New-Tweet CSS -->
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
 
+  <!-- Error Message CSS -->
+  <link rel="stylesheet" href="/styles/error.css" type="text/css">
+
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -66,6 +69,10 @@
   <!-- Main content -->
   <main>
     <div class="mainContainer">
+      <section class = "errorPopup">
+        <i class="fa-solid fa-circle-exclamation fa-2xl"></i>
+        <div class ="errorMessage"></div>
+      </section>
       <section class="new-tweet">
         <form action="/tweets" method="POST" id="tweetForm">
           <textarea class="textArea" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
