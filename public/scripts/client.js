@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+  $(".errorPopup").hide();
+
+  // Prevent XSS attacks by escaping
+  const escape = (str) => {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   // Takes in an object and formats its data into an article
   const createTweetElement = (tweetData) => {
     const { user, content, created_at } = tweetData;
@@ -13,7 +22,7 @@ $(document).ready(function() {
           <div class="userHandle">${user.handle}</div>
         </header>
         <div class="midSection">
-          <div class="innerText">${content.text}</div>
+          <div class="innerText">${escape(content.text)}</div>
         </div>
         <footer>
           <div class="datePosted">${timeago.format(created_at)}</div>
@@ -40,14 +49,21 @@ $(document).ready(function() {
   $("#tweetForm").submit(function(event) {
     event.preventDefault();
 
+    // Error message shown if text is greater than 140 characters or no characters
     const text = $("#tweet-text").val()
     if(text.length > 140) {
-      return alert("Message is too long!")
+      $(".errorMessage").text("You have exceeded the maximum character count!");
+      $(".errorPopup").slideDown(500);
+      $(".errorPopup").delay(4000).slideUp(500);
+      return;
     }
-    if(text.length === 0) {
-      return alert("Cannot post an empty tweet!")
+    if(text.length === 0 || text === null) {
+      $(".errorMessage").text("Cannot post blank message!");
+      $(".errorPopup").slideDown(500);
+      $(".errorPopup").delay(4000).slideUp(500);
+      return;
     }
-
+    
     $.ajax("/tweets", {method: "POST", data:  $(this).serialize()})
       .then(function() {
         $(".new-tweet-container").empty(); // prevent duplication
