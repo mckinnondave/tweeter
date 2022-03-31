@@ -19,9 +19,7 @@
 /* Text row */
 .textArea {
   width: 100%;
-  border-left: none;
-  border-top: none;
-  border-right: none;
+  border: none;
   border-bottom: solid black 5px;
   background: transparent;
   resize: none;
