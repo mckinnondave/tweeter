@@ -14,7 +14,7 @@ $(document).ready(function() {
     const { user, content, created_at } = tweetData;
     const $tweet = $(`
     <article>
-        <header>
+        <header class="userHeader">
           <div class="userName">
           <img src="${user.avatars}"> &nbsp;
           ${user.name}
