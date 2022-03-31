@@ -21,3 +21,34 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Chance
+- Body-parser
+- MD5
+
+## Dev Dependencies
+
+- Nodemon
+
+## Directories
+
+### Public
+
+#### Images
+
+- Contains profile image and screenshots of project
+
+#### Scripts
+
+- Contains all Javascript files used in project
+
+#### Styles
+
+- Contains all CSS files used in project
+
+#### Vendor
+
+- Contains 3rd party code
+
+### Server
+
+- Contains all server logic
