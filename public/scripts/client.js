@@ -53,14 +53,12 @@ $(document).ready(function() {
     const text = $("#tweet-text").val()
     if(text.length > 140) {
       $(".errorMessage").text("You have exceeded the maximum character count!");
-      $(".errorPopup").slideDown(500);
-      $(".errorPopup").delay(4000).slideUp(500);
+      $(".errorPopup").slideDown(500).delay(4000).slideUp(500);
       return;
     }
     if(!text.length) {
       $(".errorMessage").text("Cannot post blank message!");
-      $(".errorPopup").slideDown(500);
-      $(".errorPopup").delay(4000).slideUp(500);
+      $(".errorPopup").slideDown(500).delay(4000).slideUp(500);
       return;
     }
     
