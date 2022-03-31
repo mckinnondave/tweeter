@@ -1,7 +1,7 @@
 .errorPopup {
   display: flex;
   border: solid red 5px;
-  width: 30%;
+  width: 80%;
   margin: auto;
   margin-bottom: 50px;
   border-radius: 10px;
