@@ -135,7 +135,7 @@ footer div {
 }
 
 .fa-solid:hover {
-  color: white;
+  color: #ec864a;
   transition: 0.3s;
 }
 
@@ -152,10 +152,6 @@ footer div {
   header {
     width: 30%;
     border-radius: 10px;
-  }
-  .fa-solid:hover {
-    color: #ec864a;
-    transition: 0.3s;
   }
   nav {
     margin-bottom: 80px;
