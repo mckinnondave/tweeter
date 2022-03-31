@@ -62,6 +62,9 @@ $(document).ready(function() {
         $(".new-tweet-container").empty(); // prevent duplication
         loadTweets();
       });
+    
+    // If post is successful, erase tweet form
+    $("#tweetForm").trigger("reset")
   });
 
   // Takes in array of tweet objects, sends each through createTweetElement, and posts each resulting article to the tweet container
