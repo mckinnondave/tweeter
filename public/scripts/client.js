@@ -57,7 +57,7 @@ $(document).ready(function() {
       $(".errorPopup").delay(4000).slideUp(500);
       return;
     }
-    if(text.length === 0 || text === null) {
+    if(!text.length) {
       $(".errorMessage").text("Cannot post blank message!");
       $(".errorPopup").slideDown(500);
       $(".errorPopup").delay(4000).slideUp(500);
