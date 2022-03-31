@@ -1,7 +1,3 @@
-/* * {
-  border: solid black;
-} */
-
 nav {
   position: sticky;
   top: 0;
@@ -11,6 +7,7 @@ nav {
   color: #4056A1;
   width: 100%;
 }
+
 /* Container for all nav classes inside nav bar */
 .navbar {
   display: flex;
@@ -36,7 +33,7 @@ nav {
   font-weight: bold;
   margin-top:7px;
 }
-/* Orange down arrow */
+/* Down arrow */
 .fa-angles-down {
   display: flex;
   justify-content: center;
@@ -45,13 +42,13 @@ nav {
   -webkit-animation: mover 1.0s infinite  alternate;
   animation: mover 1.0s infinite  alternate;
 }
-
 .fa-angles-down:hover {
   transition: .3s;
   color: black;
   cursor: pointer;
 }
 
+/* Media content for dynamic display */
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: #4056A1;
@@ -63,7 +60,6 @@ nav {
   } 
 }
 
-/* Up/Down animation for arrows in nav bar */
 @keyframes mover {
   0% { transform: translateY(0); }
   100% { transform: translateY(-10px); }
