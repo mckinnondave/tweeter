@@ -33,21 +33,21 @@ This repository is the starter code for the project: Students will fork and clon
 
 ### Public
 
-  #### Images
+#### Images
 
-    - Contains profile image and screenshots of project
+- Contains profile image and screenshots of project
 
-  #### Scripts
+#### Scripts
 
-    - Contains all Javascript files used in project
+- Contains all Javascript files used in project
 
-  #### Styles
+#### Styles
 
-    - Contains all CSS files used in project
+- Contains all CSS files used in project
 
-  #### Vendor
+#### Vendor
 
-    - Contains 3rd party code
+- Contains 3rd party code
 
 ### Server
 
