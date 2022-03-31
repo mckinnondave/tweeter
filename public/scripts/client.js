@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  // Hide error message, tweet form, and up arrow
   $(".errorPopup").hide();
   $("#tweetForm").hide();
   $(".arrowUp").hide();
@@ -39,15 +40,7 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  // Takes in array of tweet objects, sends each through createTweetElement, and posts each resulting article to the main tweet container
-  const renderTweets = (tweetObjects) => {
-    for (const object of tweetObjects) {
-      const $tweet = createTweetElement(object);
-      $(".new-tweet-container").prepend($tweet);
-    }
-  };
-
-  // Takes what is typed in the tweet form, serializes it and posts it to /tweets once submit
+  // Takes what is typed in the tweet form, serializes it and posts it to /tweets once submitted
   $("#tweetForm").submit(function(event) {
     event.preventDefault();
 
@@ -71,7 +64,15 @@ $(document).ready(function() {
       });
   });
 
-  // retrieves tweet data and sends to renderTweets
+  // Takes in array of tweet objects, sends each through createTweetElement, and posts each resulting article to the tweet container
+  const renderTweets = (tweetObjects) => {
+    for (const object of tweetObjects) {
+      const $tweet = createTweetElement(object);
+      $(".new-tweet-container").prepend($tweet);
+    }
+  };
+
+  // Retrieves tweet data and sends to renderTweets for posting
   const loadTweets = () => {
     $.ajax("/tweets", { method: "GET" })
       .then(function(data) {
@@ -80,26 +81,27 @@ $(document).ready(function() {
   };
   loadTweets();
 
-  // click event on navbar down arrows to show or hide tweet form
+  // Click event on navbar down arrows to show or hide tweet form
   $(".fa-angles-down").click(function() {
     $("#tweetForm").slideToggle(500);
   });
 
-  // click event on lower arrow button to scroll user to top of page
-  $(".arrowUp").click(function () {
+  // Click event on lower arrow button to scroll user to top of page
+  $(".arrowUp").click(function() {
     $("html, body").animate({
       scrollTop: 0
-    }, 350)
+    }, 350);
     $("#tweetForm").slideDown(500);
-  })
+  });
 
+  // hide/show arrow buttons whether at top of screen or not
   $(window).scroll(function() {
-    $(".arrowUp").fadeIn(500)
-    $(".newTweet").fadeOut(500)
-    if($(window).scrollTop() === 0) {
+    $(".arrowUp").fadeIn(500);
+    $(".newTweet").fadeOut(500);
+    if ($(window).scrollTop() === 0) {
       $(".arrowUp").fadeOut(500);
       $(".newTweet").fadeIn(500);
     }
-  })
+  });
 
 });
