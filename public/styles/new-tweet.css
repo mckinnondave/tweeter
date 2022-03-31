@@ -1,3 +1,7 @@
+#tweetForm {
+  margin-bottom: 50px;
+}
+
 /* row containing tweet button and counter */
 .tweetButtonRow {
   display: flex;
