@@ -64,7 +64,7 @@ $(document).ready(function() {
       });
     
     // If post is successful, erase tweet form
-    $("#tweetForm").trigger("reset")
+    $("#tweetForm").trigger("reset");
   });
 
   // Takes in array of tweet objects, sends each through createTweetElement, and posts each resulting article to the tweet container
