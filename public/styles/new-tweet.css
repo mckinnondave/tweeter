@@ -28,9 +28,8 @@
   font-weight: bold;
 }
 .textArea::placeholder {
-  color: black;
+  color: rgb(160, 156, 156);
   font-weight: bold;
-  opacity: 0.5;
 }
 .redCounter {
   color: red;
