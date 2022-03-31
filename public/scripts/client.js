@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   $(".errorPopup").hide();
   $("#tweetForm").hide();
+  $(".arrowUp").hide();
 
   // Prevent XSS attacks by escaping
   const escape = (str) => {
@@ -50,7 +51,7 @@ $(document).ready(function() {
   $("#tweetForm").submit(function(event) {
     event.preventDefault();
 
-    // Error message shown if text is greater than 140 characters or no characters
+    // Error handling if statements
     const text = $("#tweet-text").val();
     if (text.length > 140) {
       $(".errorMessage").text("You have exceeded the maximum character count!");
@@ -83,5 +84,22 @@ $(document).ready(function() {
   $(".fa-angles-down").click(function() {
     $("#tweetForm").slideToggle(500);
   });
+
+  // click event on lower arrow button to scroll user to top of page
+  $(".arrowUp").click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 350)
+    $("#tweetForm").slideDown(500);
+  })
+
+  $(window).scroll(function() {
+    $(".arrowUp").fadeIn(500)
+    $(".newTweet").fadeOut(500)
+    if($(window).scrollTop() === 0) {
+      $(".arrowUp").fadeOut(500);
+      $(".newTweet").fadeIn(500);
+    }
+  })
 
 });
