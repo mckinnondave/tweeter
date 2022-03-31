@@ -22,6 +22,10 @@ header {
   height: 400px;
   width: 100%;
 }
+header h2 {
+  margin-bottom: 0px;
+  color: #4056A1;
+}
 
 main {
   display: flex;
