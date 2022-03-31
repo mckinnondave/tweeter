@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
   $(".errorPopup").hide();
+  $("#tweetForm").hide();
 
   // Prevent XSS attacks by escaping
   const escape = (str) => {
@@ -77,5 +78,9 @@ $(document).ready(function() {
       });
   };
   loadTweets();
+
+  $(".fa-angles-down").click(function(){
+    $("#tweetForm").slideToggle(500)
+  })
 
 });
