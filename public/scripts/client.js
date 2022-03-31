@@ -51,13 +51,13 @@ $(document).ready(function() {
     event.preventDefault();
 
     // Error message shown if text is greater than 140 characters or no characters
-    const text = $("#tweet-text").val()
-    if(text.length > 140) {
+    const text = $("#tweet-text").val();
+    if (text.length > 140) {
       $(".errorMessage").text("You have exceeded the maximum character count!");
       $(".errorPopup").slideDown(500).delay(4000).slideUp(500);
       return;
     }
-    if(!text.length) {
+    if (!text.length) {
       $(".errorMessage").text("Cannot post blank message!");
       $(".errorPopup").slideDown(500).delay(4000).slideUp(500);
       return;
@@ -79,8 +79,9 @@ $(document).ready(function() {
   };
   loadTweets();
 
-  $(".fa-angles-down").click(function(){
-    $("#tweetForm").slideToggle(500)
-  })
+  // click event on navbar down arrows to show or hide tweet form
+  $(".fa-angles-down").click(function() {
+    $("#tweetForm").slideToggle(500);
+  });
 
 });
