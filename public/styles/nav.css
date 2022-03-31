@@ -46,6 +46,12 @@ nav {
   animation: mover 1.0s infinite  alternate;
 }
 
+.fa-angles-down:hover {
+  transition: .3s;
+  color: black;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: #4056A1;
