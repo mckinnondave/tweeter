@@ -2,7 +2,7 @@
   margin-bottom: 50px;
 }
 
-/* row containing tweet button and counter */
+/* Row containing tweet button and counter */
 .tweetButtonRow {
   display: flex;
   justify-content: space-between;
@@ -10,13 +10,13 @@
   align-items: flex-end;
   margin-top: 10px;
 }
-
 .tweetButtonRow button {
   border-radius: 5px;
   background-color: #4056A1;
   color: white;
 }
 
+/* Text row */
 .textArea {
   width: 100%;
   border-left: none;
@@ -29,13 +29,11 @@
   height: 45px;
   font-weight: bold;
 }
-
 .textArea::placeholder {
   color: black;
   font-weight: bold;
   opacity: 0.5;
 }
-
 .redCounter {
   color: red;
 }
