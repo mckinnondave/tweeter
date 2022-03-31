@@ -83,15 +83,19 @@ $(document).ready(function() {
 
   // Click event on navbar down arrows to show or hide tweet form
   $(".fa-angles-down").click(function() {
-    $("#tweetForm").slideToggle(500);
+    $("#tweetForm").slideDown(500);
+    $(".textArea").focus();
+    $(".newTweet").fadeOut(500);
   });
 
   // Click event on lower arrow button to scroll user to top of page
   $(".arrowUp").click(function() {
+    $(".newTweet").fadeOut(500);
     $("html, body").animate({
       scrollTop: 0
     }, 350);
     $("#tweetForm").slideDown(500);
+    $(".textArea").focus();
   });
 
   // hide/show arrow buttons whether at top of screen or not
@@ -100,6 +104,9 @@ $(document).ready(function() {
     $(".newTweet").fadeOut(500);
     if ($(window).scrollTop() === 0) {
       $(".arrowUp").fadeOut(500);
+      if ($("#tweetForm").is(":visible")) {
+        return;
+      }
       $(".newTweet").fadeIn(500);
     }
   });
